@@ -22,7 +22,7 @@ function Login() {
         value={password}
         onChange={(event)=>setPassword(event.target.value)}
       placeholder='Password' />
-      <button onClick={{handleSubmit}}>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
      </div>
   )
 }
