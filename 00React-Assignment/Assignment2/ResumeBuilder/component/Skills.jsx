@@ -8,7 +8,7 @@ function Skills({skills}) {
         {  skills.map((skills, index) =>(
                         <li key= {index}>
                             {skills}
-                        </li>
+                         </li>
         ))
 
         }
