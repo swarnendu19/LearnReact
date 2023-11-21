@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+  
+import React from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const resumeData = {
+    experience: [
+      { year: 2012, company: 'XYZ Corp', role: 'Software Developer' },
+      { year: 2015, company: 'ABC Ltd', role: 'Senior Developer' },
+      { year: 2018, company: 'PQR Inc', role: 'Tech Lead' },
+    ],
+    education: [
+      { year: 2008, degree: 'Bachelor of Science', institution: 'University A' },
+      { year: 2011, degree: 'Master of Science', institution: 'University B' },
+    ],
+    skills: ['React.js', 'Node.js', 'JavaScript', 'HTML', 'CSS'],
+  };
+  
+ 
   return (
     <>
-    
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <h1>Resume</h1>
+    <p>Interests</p>
+    <ul>
+      <li> </li>
+      <li>Photography</li>
+    </ul>
+      
     </>
   )
 }
