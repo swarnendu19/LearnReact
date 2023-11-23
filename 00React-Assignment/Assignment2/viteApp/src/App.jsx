@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import List from './List';  
 
-function App() {
- 
+const App = () => {
+  const items = ['Item 1', 'Item 2', 'Item 3'];
+
   return (
-    <>
-       
-    </>
-  )
-}
+    <div>
+      <List layout="numbered" items={items} />
+      <List layout="alpha" items={items} />
+      <List layout="bullet" items={items} />
+    </div>
+  );
+};
 
-export default App
+export default App;
+
