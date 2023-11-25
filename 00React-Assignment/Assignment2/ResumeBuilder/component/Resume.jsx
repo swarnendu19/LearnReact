@@ -16,7 +16,7 @@ function Resume({data}) {
      <Education education={data.education}/>
      </Border>
      <Border>
-     <Skills skills={data.skills} />
+     <Skills skills={data.skills } />
      </Border>
      
     </div>

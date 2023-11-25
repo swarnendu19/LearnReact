@@ -12,7 +12,7 @@ const resumeData = {
     { year: 2008, degree: 'Bachelor of Science', institution: 'University A' },
     { year: 2011, degree: 'Master of Science', institution: 'University B' },
   ],
-  skills: ['React.js', 'Node.js', 'JavaScript', 'HTML', 'CSS'],
+  skills: [ ],
 };
 
 function App() {
