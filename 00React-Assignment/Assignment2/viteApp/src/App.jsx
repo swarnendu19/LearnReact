@@ -1,17 +1,31 @@
 import React from 'react';
-import List from './List';  
+import List from '../component/List';
 
 const App = () => {
-  const items = ['Item 1', 'Item 2', 'Item 3'];
+  let items = {
+    experience: [
+      { year: 2012, company: 'XYZ Corp', role: 'Software Developer' },
+      { year: 2015, company: 'ABC Ltd', role: 'Senior Developer' },
+      { year: 2018, company: 'PQR Inc', role: 'Tech Lead' },
+    ],
+    education: [
+      { year: 2008, degree: 'Bachelor of Science', institution: 'University A' },
+      { year: 2011, degree: 'Master of Science', institution: 'University B' },
+    ],
+    skills: ["node js", "react js" ],
+  };
 
   return (
     <div>
-      <List layout="numbered" items={items} />
-      <List layout="alpha" items={items} />
-      <List layout="bullet" items={items} />
+      <List layout="experience" items={items.experience} />
+      <List layout="education" items={items.education} />
+      <List layout="skills" items={items.skills} />
     </div>
   );
 };
 
 export default App;
+
+
+ 
 

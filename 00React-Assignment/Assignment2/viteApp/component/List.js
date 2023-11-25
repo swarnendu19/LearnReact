@@ -5,15 +5,17 @@ const List = ({ layout, items }) => {
 
   // Render the list based on the layout prop
   switch (layout) {
-    case 'numbered':
+    case 'experience':
       listItems = items.map((item, index) => <li key={index}>{item}</li>);
       return <ol>{listItems}</ol>;
 
-    case 'alpha':
-      listItems = items.map((item, index) => <li key={index}>{String.fromCharCode(65 + index)}. {item}</li>);
+    case 'education':
+      listItems = items.map((item, index) => (
+        <li key={index}>{`${String.fromCharCode(65 + index)}. ${item.year} - ${item.degree} at ${item.institution}`}</li>
+      ));
       return <ol>{listItems}</ol>;
 
-    case 'bullet':
+    case 'skills':
       listItems = items.map((item, index) => <li key={index}>{item}</li>);
       return <ul>{listItems}</ul>;
 
@@ -23,4 +25,5 @@ const List = ({ layout, items }) => {
 };
 
 export default List;
+
 
