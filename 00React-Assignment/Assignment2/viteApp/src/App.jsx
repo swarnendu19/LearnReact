@@ -1,5 +1,6 @@
 import React from 'react';
 import List from '../component/List';
+import Btn from '../component/Btn';
 
 const App = () => {
   let items = {
@@ -20,6 +21,7 @@ const App = () => {
       <List layout="experience" items={items.experience} />
       <List layout="education" items={items.education} />
       <List layout="skills" items={items.skills} />
+       <Btn>Me</Btn>
     </div>
   );
 };
