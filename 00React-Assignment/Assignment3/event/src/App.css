@@ -1,1 +1,17 @@
+ img{
+    width:55px;
+    height: 60px;
+ }
  
+ img:hover{
+    width:192px;
+    height: 136px;
+ }
+
+ body{
+    background-color: black;
+ }
+
+ p{
+   color: #f2eaea;
+ }
