@@ -16,9 +16,13 @@ const resumeData = {
 };
 
 function App() {
+  const handlePrint = () => {
+    window.print();
+  };
   return (
     <div className="App">
       <Resume data={resumeData} />
+      <button onClick={handlePrint}>Print</button>
     </div>
   );
 }
