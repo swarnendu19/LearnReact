@@ -1,23 +1,44 @@
 import React from 'react'
+import { useState } from 'react';
+
 
 function TodoForm() {
-    const handleChange =()=>{}
-    const handleSubmit=()=>{}
-  return (
+
+    const [task,setTask]=useState(" ")
+    const[taskList,setTaskList] = useState([])
+    const handleChange =(e)=>{
+        setTask(e.target.value)
+     }
+    const handleAdd=()=>{
+        if(task.trim() !== ''){
+            setTaskList([...taskList,task])
+            setTask(' ')
+        }
+     }
+  return ( 
     <div>
-     <form>
-        <input 
-        type='text'
-        name= 'task'
-        onChange={handleChange}     
-        placeholder='task'
-         />
+   {/* Task input form */}
+   <label>
+        Task:
+        <input
+          type="text"
+          value={task} 
+          onChange={handleChange }
+        />
+      </label>
+
         <button 
         type='submit'
-        onSubmit={handleSubmit}>
+        onClick={handleAdd}>
           Add
         </button>
-      </form>
+     
+      {/* Display The list of tasks */}
+      <ul>
+       {taskList.map((todo,index)=>(
+        <li key={index}>{todo}</li>
+       ))} 
+      </ul>
     </div>
   )
 }
