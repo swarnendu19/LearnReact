@@ -23,6 +23,7 @@ function App() {
     <div className="App">
       <Resume data={resumeData} />
       <button onClick={handlePrint}>Print</button>
+       <button> Edit</button>
     </div>
   );
 }
